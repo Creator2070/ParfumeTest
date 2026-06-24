@@ -1,0 +1,12 @@
+{
+  "name": "abysse-parfums",
+  "version": "1.0.0",
+  "description": "ABYSSE Parfums – Shop mit Warenkorb und Express-Backend",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

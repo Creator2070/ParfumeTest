@@ -20,7 +20,48 @@
     <a href="#geschichte">Geschichte</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
+  <button class="cart-toggle" id="cart-toggle" aria-label="Warenkorb öffnen">
+    Warenkorb <span class="cart-count" id="cart-count">0</span>
+  </button>
 </header>
+
+<div class="cart-overlay" id="cart-overlay"></div>
+
+<aside class="cart-drawer" id="cart-drawer">
+  <div class="cart-drawer-head">
+    <h2>Warenkorb</h2>
+    <button class="cart-close" id="cart-close" aria-label="Schließen">&times;</button>
+  </div>
+  <div class="cart-items" id="cart-items">
+    <p class="cart-empty">Dein Warenkorb ist leer.</p>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Gesamt</span>
+      <span id="cart-total">0&nbsp;€</span>
+    </div>
+    <button class="btn btn-full" id="checkout-open">Zur Kasse</button>
+  </div>
+</aside>
+
+<div class="checkout-overlay" id="checkout-overlay">
+  <div class="checkout-modal">
+    <button class="cart-close" id="checkout-close" aria-label="Schließen">&times;</button>
+    <h2>Bestellung abschließen</h2>
+    <form id="checkout-form">
+      <label>Name<input type="text" name="name" required></label>
+      <label>E-Mail<input type="email" name="email" required></label>
+      <label>Lieferadresse<textarea name="address" rows="3" required></textarea></label>
+      <div class="checkout-summary" id="checkout-summary"></div>
+      <button type="submit" class="btn btn-full">Bestellung aufgeben</button>
+    </form>
+    <div class="checkout-success" id="checkout-success" hidden>
+      <p>Vielen Dank! Deine Bestellung wurde aufgenommen.</p>
+      <p class="order-id" id="order-id"></p>
+      <button class="btn" id="checkout-done">Schließen</button>
+    </div>
+  </div>
+</div>
 
 <section class="hero">
   <div class="hero-content">
@@ -45,6 +86,7 @@
       <h3>Abysse Bleu</h3>
       <p>Salzige Frische, Algen, Ambra &amp; Treibholz.</p>
       <span class="price">129&nbsp;€</span>
+      <button class="btn add-to-cart" data-product-id="abysse-bleu">In den Warenkorb</button>
     </article>
     <article class="bottle-card">
       <div class="bottle-illustration jade">
@@ -56,6 +98,7 @@
       <h3>Abysse Jade</h3>
       <p>Grüne Tiefe, Seetang, Iris &amp; weißer Moschus.</p>
       <span class="price">139&nbsp;€</span>
+      <button class="btn add-to-cart" data-product-id="abysse-jade">In den Warenkorb</button>
     </article>
     <article class="bottle-card">
       <div class="bottle-illustration midnight">
@@ -67,6 +110,7 @@
       <h3>Abysse Nuit</h3>
       <p>Dunkle Strömung, Vetiver, Bernstein &amp; Moos.</p>
       <span class="price">149&nbsp;€</span>
+      <button class="btn add-to-cart" data-product-id="abysse-nuit">In den Warenkorb</button>
     </article>
   </div>
 </section>
@@ -97,5 +141,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
 <script src="ocean.js"></script>
+<script src="cart.js"></script>
 </body>
 </html>

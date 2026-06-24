@@ -1,0 +1,23 @@
+[
+  {
+    "id": "abysse-bleu",
+    "name": "Abysse Bleu",
+    "description": "Salzige Frische, Algen, Ambra & Treibholz.",
+    "price": 129,
+    "variant": "teal"
+  },
+  {
+    "id": "abysse-jade",
+    "name": "Abysse Jade",
+    "description": "Grüne Tiefe, Seetang, Iris & weißer Moschus.",
+    "price": 139,
+    "variant": "jade"
+  },
+  {
+    "id": "abysse-nuit",
+    "name": "Abysse Nuit",
+    "description": "Dunkle Strömung, Vetiver, Bernstein & Moos.",
+    "price": 149,
+    "variant": "midnight"
+  }
+]
