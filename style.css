@@ -1,0 +1,258 @@
+:root{
+  --deep: #021015;
+  --teal: #0a3d4a;
+  --glow: #6ff0e0;
+  --jade: #2fae8b;
+  --foam: #d9f4ef;
+  --gold: #c9a86a;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'Jost', sans-serif;
+  color: var(--foam);
+  background: var(--deep);
+  overflow-x:hidden;
+}
+
+h1,h2,h3{font-family:'Cormorant Garamond', serif; font-weight:500; letter-spacing:0.04em;}
+
+#bg-canvas{
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  z-index:0;
+  background: radial-gradient(ellipse at center, #04181f 0%, #010708 100%);
+}
+
+.site-header, .hero, .kollektion, .duft, .geschichte, footer{
+  position:relative;
+  z-index:1;
+}
+
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:2rem 4rem;
+}
+
+.logo{
+  font-family:'Cormorant Garamond', serif;
+  font-size:1.6rem;
+  letter-spacing:0.3em;
+  font-weight:600;
+}
+
+nav a{
+  color: var(--foam);
+  text-decoration:none;
+  margin-left:2.5rem;
+  font-size:0.85rem;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  opacity:0.8;
+  transition:opacity 0.3s, color 0.3s;
+}
+nav a:hover{ opacity:1; color: var(--glow); }
+
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero-content .eyebrow{
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  font-size:0.75rem;
+  color: var(--glow);
+  margin-bottom:1.2rem;
+}
+
+.hero-content h1{
+  font-size:7rem;
+  letter-spacing:0.15em;
+  text-shadow:0 0 40px rgba(111,240,224,0.35);
+}
+
+.tagline{
+  font-size:1.1rem;
+  font-weight:300;
+  opacity:0.75;
+  margin:1.2rem 0 2.2rem;
+  letter-spacing:0.03em;
+}
+
+.btn{
+  display:inline-block;
+  border:1px solid var(--glow);
+  color: var(--foam);
+  padding:0.85rem 2.4rem;
+  text-decoration:none;
+  letter-spacing:0.18em;
+  font-size:0.8rem;
+  text-transform:uppercase;
+  transition:all 0.35s;
+  background:rgba(111,240,224,0.05);
+}
+.btn:hover{
+  background: var(--glow);
+  color: var(--deep);
+  box-shadow:0 0 30px rgba(111,240,224,0.5);
+}
+
+.scroll-hint{
+  position:absolute;
+  bottom:2.5rem;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:0.7rem;
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  opacity:0.5;
+  animation: bob 2.2s ease-in-out infinite;
+}
+@keyframes bob{
+  0%,100%{ transform:translate(-50%,0); }
+  50%{ transform:translate(-50%,8px); }
+}
+
+section{
+  padding:7rem 4rem;
+}
+
+.kollektion h2, .duft h2, .geschichte h2{
+  text-align:center;
+  font-size:2.6rem;
+  margin-bottom:3.5rem;
+}
+
+.bottles{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:3rem;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.bottle-card{
+  text-align:center;
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(111,240,224,0.12);
+  border-radius:6px;
+  padding:2.5rem 1.5rem;
+  transition:transform 0.4s, box-shadow 0.4s;
+}
+.bottle-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.5), 0 0 25px rgba(111,240,224,0.15);
+}
+
+.bottle-illustration{
+  position:relative;
+  width:90px;
+  height:200px;
+  margin:0 auto 1.8rem;
+}
+.bottle-illustration .flask{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:165px;
+  border-radius:10px 10px 18px 18px;
+  background:linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.25);
+  backdrop-filter:blur(2px);
+  overflow:hidden;
+}
+.bottle-illustration .liquid{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:55%;
+  border-radius:0 0 18px 18px;
+}
+.bottle-illustration.teal .liquid{ background:linear-gradient(180deg, #1c7d8c, #0a3d4a); }
+.bottle-illustration.jade .liquid{ background:linear-gradient(180deg, #2fae8b, #0c4a39); }
+.bottle-illustration.midnight .liquid{ background:linear-gradient(180deg, #2b3a6b, #0b1230); }
+
+.bottle-illustration .cap{
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:34px;
+  height:38px;
+  background:linear-gradient(160deg, var(--gold), #8a703f);
+  border-radius:4px;
+}
+.bottle-illustration .label{
+  position:absolute;
+  bottom:30px;
+  left:50%;
+  transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;
+  font-size:0.62rem;
+  letter-spacing:0.18em;
+  color:#fff;
+  opacity:0.85;
+}
+
+.bottle-card h3{ font-size:1.5rem; margin-bottom:0.5rem; }
+.bottle-card p{ font-size:0.9rem; opacity:0.7; margin-bottom:1rem; font-weight:300; }
+.bottle-card .price{ color:var(--glow); letter-spacing:0.1em; font-size:0.95rem; }
+
+.duft{
+  display:flex;
+  gap:5rem;
+  align-items:center;
+  max-width:1200px;
+  margin:0 auto;
+}
+.duft-text{ flex:1; }
+.duft-text p{ font-weight:300; line-height:1.9; opacity:0.85; font-size:1.05rem; }
+.duft-notes{ flex:1; display:flex; flex-direction:column; gap:1.4rem; }
+.note{
+  border-left:1px solid var(--glow);
+  padding-left:1.2rem;
+  font-weight:300;
+  letter-spacing:0.02em;
+}
+.note span{ color:var(--glow); margin-right:0.6rem; font-family:'Cormorant Garamond',serif; }
+
+.geschichte{
+  max-width:760px;
+  margin:0 auto;
+  text-align:center;
+}
+.geschichte p{ font-weight:300; line-height:1.9; opacity:0.85; font-size:1.05rem; }
+
+footer{
+  padding:3rem 4rem;
+  border-top:1px solid rgba(111,240,224,0.12);
+}
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width:1200px;
+  margin:0 auto;
+}
+.footer-inner p{ font-size:0.8rem; opacity:0.6; }
+
+@media (max-width: 900px){
+  .site-header{ padding:1.5rem 2rem; }
+  nav a{ margin-left:1.2rem; font-size:0.7rem; }
+  .hero-content h1{ font-size:4rem; }
+  .bottles{ grid-template-columns:1fr; }
+  .duft{ flex-direction:column; }
+  section{ padding:5rem 2rem; }
+}

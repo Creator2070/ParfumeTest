@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABYSSE — Eau de Parfum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<header class="site-header">
+  <div class="logo">ABYSSE</div>
+  <nav>
+    <a href="#kollektion">Kollektion</a>
+    <a href="#duft">Der Duft</a>
+    <a href="#geschichte">Geschichte</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">Eau de Parfum &mdash; Limited Edition</p>
+    <h1>ABYSSE</h1>
+    <p class="tagline">Ein Duft, geboren aus der Tiefe des Meeres.</p>
+    <a href="#kollektion" class="btn">Entdecken</a>
+  </div>
+  <div class="scroll-hint">scroll</div>
+</section>
+
+<section class="kollektion" id="kollektion">
+  <h2>Die Kollektion</h2>
+  <div class="bottles">
+    <article class="bottle-card">
+      <div class="bottle-illustration teal">
+        <div class="cap"></div>
+        <div class="flask"></div>
+        <div class="liquid"></div>
+        <div class="label">ABYSSE</div>
+      </div>
+      <h3>Abysse Bleu</h3>
+      <p>Salzige Frische, Algen, Ambra &amp; Treibholz.</p>
+      <span class="price">129&nbsp;€</span>
+    </article>
+    <article class="bottle-card">
+      <div class="bottle-illustration jade">
+        <div class="cap"></div>
+        <div class="flask"></div>
+        <div class="liquid"></div>
+        <div class="label">ABYSSE</div>
+      </div>
+      <h3>Abysse Jade</h3>
+      <p>Grüne Tiefe, Seetang, Iris &amp; weißer Moschus.</p>
+      <span class="price">139&nbsp;€</span>
+    </article>
+    <article class="bottle-card">
+      <div class="bottle-illustration midnight">
+        <div class="cap"></div>
+        <div class="flask"></div>
+        <div class="liquid"></div>
+        <div class="label">ABYSSE</div>
+      </div>
+      <h3>Abysse Nuit</h3>
+      <p>Dunkle Strömung, Vetiver, Bernstein &amp; Moos.</p>
+      <span class="price">149&nbsp;€</span>
+    </article>
+  </div>
+</section>
+
+<section class="duft" id="duft">
+  <div class="duft-text">
+    <h2>Der Duft</h2>
+    <p>Wie ein Schwarm leuchtender Fische, die einem fernen Glanz in der Dunkelheit folgen, entfaltet sich ABYSSE in schimmernden Wellen &mdash; kühl, klar und tief. Eine olfaktorische Reise an den Rand des Lichts.</p>
+  </div>
+  <div class="duft-notes">
+    <div class="note"><span>01</span> Kopfnote &mdash; Meeresalgen, Bergamotte</div>
+    <div class="note"><span>02</span> Herznote &mdash; Ambra, Iris, Seesalz</div>
+    <div class="note"><span>03</span> Basisnote &mdash; Treibholz, weißer Moschus</div>
+  </div>
+</section>
+
+<section class="geschichte" id="geschichte">
+  <h2>Die Geschichte</h2>
+  <p>ABYSSE wurde an der Küste konzipiert, dort wo das Licht der Oberfläche in die Tiefe verschwindet und nur noch das sanfte Leuchten der Strömung bleibt. Inspiriert von den stillen, hypnotischen Bewegungen der Tiefsee, vereint dieser Duft Klarheit und Mysterium.</p>
+</section>
+
+<footer id="kontakt">
+  <div class="footer-inner">
+    <div class="logo">ABYSSE</div>
+    <p>&copy; 2026 Abysse Parfums. Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+<script src="ocean.js"></script>
+</body>
+</html>
